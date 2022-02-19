@@ -13,7 +13,7 @@ export const Card = ({ title, description, image, color }: Props) => {
       <span>{title}</span>
       <p>{description}</p>
       <div>
-        <img src={image} />
+        <img src={image} alt={title} />
       </div>
     </Component.Container>
   );
