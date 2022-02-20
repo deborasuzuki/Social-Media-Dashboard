@@ -1,15 +1,11 @@
 import { ToggleBtn } from '../ToggleBtn';
 import * as Componet from './styles';
-import { ThemeContext } from 'styled-components';
-import { useContext } from 'react';
 
 type Props = {
   toggleTheme: () => void;
 };
 
 export const Header = ({ toggleTheme }: Props) => {
-  const { title } = useContext(ThemeContext);
-
   return (
     <Componet.Container>
       <div className="col-1">
