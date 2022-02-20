@@ -1,12 +1,17 @@
 import * as Component from './App.styles';
+
 import { CardsArea } from './components/CardsArea';
-import { TextArea } from './components/TextArea';
+import { SmallCardsArea } from './components/SmallCardsArea';
+import { Header } from './components/Header';
+import { SmallCard } from './components/SmallCard';
+import { ToggleBtn } from './components/ToggleBtn';
 
 const App = () => {
   return (
     <Component.Container>
-      <TextArea />
+      <Header />
       <CardsArea />
+      <SmallCardsArea />
     </Component.Container>
   );
 };
