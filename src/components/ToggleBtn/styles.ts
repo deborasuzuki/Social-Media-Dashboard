@@ -7,6 +7,7 @@ export const Container = styled.div`
   width: 50px;
   height: 24px;
   outline: none;
+  cursor: pointer;
   
 }
 .switch input {

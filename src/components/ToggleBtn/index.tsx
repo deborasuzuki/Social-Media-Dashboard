@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 type Props = {
   isChecked: boolean;
+  changeTheme: () => void;
 };
 
 export const ToggleBtn = (props: Props) => {
@@ -10,6 +11,7 @@ export const ToggleBtn = (props: Props) => {
 
   const handleChange = () => {
     setChecked(!isChecked);
+    props.changeTheme();
   };
 
   return (

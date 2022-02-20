@@ -16,7 +16,7 @@ export const Container = styled.div`
     span {
       font-size: 24px;
       font-weight: 700;
-      color: hsl(228, 12%, 44%);
+      color:  ${(props) => props.theme.colors.textPrimary};
     }
   }
 
@@ -29,8 +29,14 @@ export const Container = styled.div`
 
   @media (max-width: 768px) {
       flex-direction: column;
+      width:100%;
       height: auto;
       margin 50px auto 0;
+
+          .rowCard-2 {
+        flex-direction: column;
+        margin-bottom: 0;
+      }
   }
   
 `;

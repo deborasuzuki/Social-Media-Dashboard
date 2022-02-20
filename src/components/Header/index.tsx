@@ -1,7 +1,15 @@
 import { ToggleBtn } from '../ToggleBtn';
 import * as Componet from './styles';
+import { ThemeContext } from 'styled-components';
+import { useContext } from 'react';
 
-export const Header = () => {
+type Props = {
+  toggleTheme: () => void;
+};
+
+export const Header = ({ toggleTheme }: Props) => {
+  const { title } = useContext(ThemeContext);
+
   return (
     <Componet.Container>
       <div className="col-1">
@@ -10,7 +18,7 @@ export const Header = () => {
       </div>
       <div className="col-2">
         <span>Dark Mode</span>
-        <ToggleBtn isChecked />
+        <ToggleBtn isChecked={false} changeTheme={toggleTheme} />
       </div>
     </Componet.Container>
   );

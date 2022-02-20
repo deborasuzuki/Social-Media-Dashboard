@@ -11,13 +11,13 @@ export const Container = styled.div`
     h2 {
       margin: 0;
       font-size: 28px;
-      color: hsl(230, 17%, 14%);
+      color: ${(props) => props.theme.colors.textSecondary};
     }
 
     span {
       font-size: 14px;
       font-weight: 700;
-      color: hsl(228, 12%, 44%);
+      color: ${(props) => props.theme.colors.textPrimary};
     }
   }
 
@@ -28,13 +28,30 @@ export const Container = styled.div`
     span {
       font-size: 14px;
       font-weight: 700;
-      color: hsl(230, 22%, 74%);
+      color: ${(props) => props.theme.colors.textTertiary};
 
       margin-right: 10px;
     }
   }
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 100%;
+    flex-direction: column;
+
+    .col-1 {
+      width: 100%;
+      padding-bottom: 24px;
+      border-bottom: 0.5px solid ${(props) => props.theme.colors.textPrimary};
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+
+    .col-2 {
+      width: 100%;
+      padding-top: 20px;
+      justify-content: space-between;
+    }
   }
 `;

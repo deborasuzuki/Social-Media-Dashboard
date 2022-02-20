@@ -10,14 +10,16 @@ export const Container = styled.div<ContainerProps>`
   height: 125px;
   padding: 20px 20px;
   border-radius: 5px;
-  background-color: hsl(225, 100%, 98%);
+  background-color: ${(props) => props.theme.colors.cardBg};
 
   display: flex;
   flex-direction: column;
   justify-contente: space-between;
 
+  cursor: pointer;
+
   &:hover {
-    background-color: hsl(227, 47%, 96%);
+    background-color: ${(props) => props.theme.colors.cardHover};
   }
 
   .row-1 {
@@ -32,7 +34,7 @@ export const Container = styled.div<ContainerProps>`
 
     span {
       font-size: 13px;
-      color: hsl(228, 12%, 44%);
+      color: ${(props) => props.theme.colors.textPrimary};
       font-weight: 700;
       margin-left: 5px;
     }
@@ -48,7 +50,7 @@ export const Container = styled.div<ContainerProps>`
       margin: 0;
       font-size: 32px;
       font-weight: 700;
-      color: hsl(230, 17%, 14%);
+      color: ${(props) => props.theme.colors.textSecondary};
     }
 
     div {
@@ -68,5 +70,6 @@ export const Container = styled.div<ContainerProps>`
 
   @media (max-width: 768px) {
     width: 100%;
+    margin: 10px 0;
   }
 `;
